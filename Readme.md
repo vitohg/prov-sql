@@ -141,7 +141,7 @@ INNER JOIN tb_curso
 ON tb_curso.cod_curso = tb_matricula.cod_curso
 ```
 
->### 03. Retornar os nomes dos alunos e seus cursos ordenados por nome.
+>### 03. Retornar o email de todos maiores de idade.
 
 <div align="center">
   <img src="/imgs/Q3_sql.png">
@@ -167,8 +167,24 @@ from tb_aluno
 
 >### 05. Retorne quantos alunos estão cadastrados em cada curso.
 
-ERROR
+<div align="center">
+  <img src="/imgs/Q5_sql.png">
+</div>
 
+```bash 
+# Attention
+'Obs: Essa questão esta respondido de forma errada, principalmente na linha 4.
+obrigado pela sua atenção'
+```
+
+```bash 
+# Code
+select tb_curso.nome_curso,
+cod_curso + cod_aluno as numero_alunos 
+from tb_curso
+inner join tb_aluno
+on tb_aluno.cod_aluno = tb_curso.cod_curso
+```
 
 >### 06. Retorne o nome de todos maiores que 18 anos.
 
@@ -224,7 +240,7 @@ from tb_curso order by nome_curso asc
 >### 10. Criar um enunciado que utilize "junção" (como resposta).
 
 ```bash 
-# Retorne os nomes, os anos de nascimento e o nome de seus respectivo curso 
+# Retorne os nomes, os anos de nascimento e o nome de seus respectivo curso em ordem alfabetica
 ```
 
 <div align="center">
