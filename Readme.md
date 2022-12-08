@@ -270,8 +270,10 @@ dados RELACIONAIS'
 
 ```bash 
 # Answer
-O SQL foi desenvolvido originalmente no início dos anos 70 nos laboratórios da IBM. O nome originalmente da linguagem era SEQUEL, 
-que significa "Structured English Query Language".
+'O SQL foi desenvolvido originalmente no início dos anos 70 nos laboratórios da IBM. O nome originalmente da linguagem era SEQUEL, 
+que significa "Structured English Query Language". No início dos anos 1980, o American National Standards Institute (ANSI) começou 
+a trabalhar no desenvolvimento de uma versão padronizada do SQL, que foi publicada em 1986 e 1987. Posteriormente, o SQL sofreu 
+importantes melhorias com outras modificações e adições ate hoje em dia, assim virando a linguagem de padrão para banco de dados.'
 ```
 
 >### 03. Liste as principais caracteríticas de SQL.
