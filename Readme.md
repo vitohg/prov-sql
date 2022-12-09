@@ -9,7 +9,7 @@
   <img src="/imgs/tb_aluno.png">
 </div>
 
-```bash 
+```sql 
 # Code tb_aluno
 create table tb_aluno (
 	cod_aluno int primary key,
@@ -28,7 +28,7 @@ create table tb_aluno (
   <img src="/imgs/tb_curso.png">
 </div>
 
-```bash 
+```sql 
 # Code tb_curso
 create table tb_curso(
 	cod_curso int primary key,
@@ -44,7 +44,7 @@ create table tb_curso(
   <img src="/imgs/tb_matricula.png">
 </div>
 
-```bash 
+```sql 
 # Code tb_matricula
 create table tb_matricula(
 	cod_curso int references tb_curso(cod_curso),
@@ -63,7 +63,7 @@ create table tb_matricula(
 </div>
 
 
-```bash 
+```sql 
 # Code insert dos dados aluno
 insert into tb_aluno(cod_aluno,nome_aluno,ano_nasc,email,sexo)
 values(1, 'Josiel Jardim', '1974','josiel@provaSQL.com.br','M');
@@ -79,7 +79,7 @@ values(3, 'João Pedro', '1979','joao@provaSQL.com.br','M');
   <img src="/imgs/insert_tb_curso.png">
 </div>
 
-```bash 
+```sql 
 # Code insert dos dados curso
 insert into tb_curso(cod_curso, nome_curso)
 values(1, 'Medicina')
@@ -97,7 +97,7 @@ values(5, 'Jornalismo')
   <img src="/imgs/insert_tb_matricula.png">
 </div>
 
-```bash 
+```sql 
 # Code insert dos dados matricula
 insert into tb_matricula(cod_curso, cod_aluno)
 values(1, 1)
@@ -114,7 +114,7 @@ values(5, 3)
   <img src="/imgs/Q1_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 insert into tb_aluno(cod_aluno,nome_aluno,ano_nasc,email,sexo)
 values(4, 'Pedro César', NULL, null,'M');
@@ -131,7 +131,7 @@ values(4, 4)
   <img src="/imgs/Q2_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select tb_aluno.nome_aluno, tb_curso.nome_curso
 FROM tb_aluno
@@ -147,7 +147,7 @@ ON tb_curso.cod_curso = tb_matricula.cod_curso
   <img src="/imgs/Q3_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select email
 from tb_aluno where 2022 - ano_nasc >= 18
@@ -159,7 +159,7 @@ from tb_aluno where 2022 - ano_nasc >= 18
   <img src="/imgs/Q4_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select count(cod_aluno)
 from tb_aluno 
@@ -177,7 +177,7 @@ from tb_aluno
 obrigado pela sua atenção'
 ```
 
-```bash 
+```sql 
 # Code
 select tb_curso.nome_curso,
 cod_curso + cod_aluno as numero_alunos 
@@ -192,7 +192,7 @@ on tb_aluno.cod_aluno = tb_curso.cod_curso
   <img src="/imgs/Q6_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select nome_aluno
 from tb_aluno where 2022 - ano_nasc >= 18 
@@ -204,7 +204,7 @@ from tb_aluno where 2022 - ano_nasc >= 18
   <img src="/imgs/Q7_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select nome_aluno, sexo
 from tb_aluno where sexo = 'F'
@@ -216,7 +216,7 @@ from tb_aluno where sexo = 'F'
   <img src="/imgs/Q8_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select tb_aluno.nome_aluno, tb_curso.nome_curso
 from tb_aluno
@@ -231,7 +231,7 @@ where nome_curso = 'Medicina' and sexo = 'F'
   <img src="/imgs/Q9_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select nome_curso
 from tb_curso order by nome_curso asc
@@ -247,7 +247,7 @@ from tb_curso order by nome_curso asc
   <img src="/imgs/Q10_sql.png">
 </div>
 
-```bash 
+```sql 
 # Code
 select tb_aluno.nome_aluno, ano_nasc, tb_curso.nome_curso
 from tb_aluno
